@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Water Saving and Sanitation Awareness">
+    <title>Home - Water Saving Awareness</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "b3b411aa-d22f-4ef1-962b-f2a45476fd26", // The ID of this integration.
+          region: "us-south", // The region your integration is hosted in.
+          serviceInstanceID: "08c4f56f-0937-492d-8c62-2da8fb2ab3f5", // The ID of your service instance.
+          onLoad: async (instance) => { await instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
+</head>
+<body>
+    <header>
+
+        <h1>Save Water, Save Life</h1>
+        <p id="greeting">Welcome to our website!</p> <!-- Dynamic greeting -->
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="methods.html">Water Saving Methods</a></li>
+            <li><a href="sanitation.html">Sanitation Importance</a></li>
+            
+        </ul>
+    </nav>
+
+    <section>
+        <h2>About Our Initiative</h2>
+        <p>This website raises awareness on water conservation and proper sanitation practices.</p>
+    </section>
+
+    <footer id="footer-placeholder"></footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

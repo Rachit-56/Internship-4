@@ -1,0 +1,83 @@
+<!-- frontend/about.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Water Saving & Sanitation Awareness</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="mb-4">About Us</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="assets/images/about.jpg" alt="About Us" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <p>Welcome to Water & Sanitation Awareness, your trusted resource for sustainable living practices. Our mission is to educate and empower individuals and communities to adopt effective water-saving methods and maintain proper sanitation standards.</p>
+                    <p>Through informative articles, practical tips, and interactive tools like our chatbot, we aim to make a positive impact on our environment and public health.</p>
+                    <p>Join us in our journey towards a more sustainable and healthier world!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot -->
+    <div class="chatbot">
+        <div class="chat-header d-flex justify-content-between align-items-center bg-primary text-white p-3">
+            <h5 class="mb-0">Water & Sanitation Bot</h5>
+            <button id="close-chat" class="btn btn-sm btn-light">&times;</button>
+        </div>
+        <div class="chat-body p-3" id="chat-body">
+            <div class="bot-message mb-2">
+                Hello! I'm here to help you with water saving and sanitation information. How can I assist you today?
+            </div>
+        </div>
+        <div class="chat-input p-3">
+            <div class="input-group">
+                <input type="text" id="user-input" class="form-control" placeholder="Type your message..." aria-label="User Message">
+                <button class="btn btn-primary" id="send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <button id="open-chat" class="btn btn-primary btn-lg rounded-circle" title="Chat with us!">
+        💧💩
+    </button>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap JS Bundle (Includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <!-- Include Navbar and Footer -->
+    <script>
+        // Load Navbar
+        fetch('partials/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+
+        // Load Footer
+        fetch('partials/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
